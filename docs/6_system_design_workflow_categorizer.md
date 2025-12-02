@@ -64,7 +64,7 @@ Client A (Acme - 50k employees)          Client B (TechCo - 100k employees)
 | Metric                 | Value   |
 | ---------------------- | ------- |
 | **Total employees**    | 500k    |
-| **Total events/day**   | ~100M   |
-| **Total storage**      | ~300 TB |
+| **Total events/day**   | ~25M    |
+| **Total storage**      | ~150 TB |
 | **Monthly LLM cost**   | ~$3,800 |
 | **Monthly total cost** | ~$22k   |
