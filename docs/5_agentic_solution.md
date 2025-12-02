@@ -5,7 +5,8 @@
 3. Categorizes users with natural language explanations ("Heavy GitHub + Jira + Figma = Frontend Engineer signature")
 4. Suggests role-specific productivity optimizations (e.g., GitHub workflow automation for engineers,
    Salesforce shortcuts for sales)
-5. Scales economically: ~$67/month for 10,000 employees, delivering $100M/year ROI
+5. Work categorization transforms generic IT policies into role-specific optimizations—cutting measurable waste (unused licenses, excessive
+   auth) while improving what matters (onboarding speed, tool access).
 
 ## **Why Agentic Workflows > Traditional ML**
 
