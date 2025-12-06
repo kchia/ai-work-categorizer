@@ -599,14 +599,14 @@ This sales workflow problem directly answers Parable's core value proposition:
 | CEO Question                                    | Sales Workflow Answer                                                                               |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | **1. Where is the bureaucracy?**                | 6 different tools requiring manual data entry for each call                                         |
-| **2. Where is the friction?**                   | 90 app switches/day, 6.5 hours/day on admin overhead                                                |
-| **3. Where is the waste?**                      | $13M/year in admin labor + $12.5M in lost revenue (100-person team)                                 |
+| **2. Where is the friction?**                   | 90 app switches/day, 6.5 hours/day on admin overhead, plus 1-1.5 hrs cognitive tax                                                |
+| **3. Where is the waste?**                      | $13M/year in admin labor + $5-15M in lost revenue opportunity (100-person team)                                 |
 | **4. Where can we automate?**                   | Redundant data entry (4× same info), call transcription, weekly reporting                           |
-| **5. How can AI make my team 100x productive?** | Agentic workflow orchestrator eliminates 70% of admin time → 33% more calls → $12.5M revenue uplift |
+| **5. How can AI make my team 100x productive?** | Agentic workflow orchestrator eliminates 60-70% of admin time → 33% more calls → $5-15M revenue uplift |
 
 **The CEO Pitch:**
 
-> "Your 100-person sales team is spending $13M/year on administrative overhead instead of selling. An AI-powered workflow orchestrator can eliminate 70% of that waste, freeing your reps to make 5 more calls per day. That's a $21M annual impact—**$9M in cost savings plus $12.5M in new revenue**."
+> "Your 100-person sales team is spending $13M/year on administrative overhead instead of selling. An AI-powered workflow orchestrator can eliminate 60-70% of that waste, freeing your reps to make 3-5 more calls per day. That's a **$14-24M annual impact**—**$9M in guaranteed cost savings plus $5-15M in revenue potential** (conservative ranges accounting for market variability)."
 
 ---
 
@@ -617,7 +617,7 @@ This sales workflow problem directly answers Parable's core value proposition:
 | **Detected** sales reps via app patterns             | **Optimizes** sales workflow with AI agent                   |
 | **Insight**: "This user is sales (95% confidence)"   | **Action**: "Eliminate 6.5 hrs/day admin overhead"           |
 | **Output**: Role classification + CEO dashboard      | **Output**: Autonomous workflow orchestration                |
-| **ROI**: Identify $100M+ in friction across org      | **ROI**: Capture $21M+ for sales team alone                  |
+| **ROI**: Identify $100M+ in friction across org      | **ROI**: Capture $14-24M for sales team alone (conservative to baseline)                  |
 | **Architecture**: LLM categorization (1-2 API calls) | **Architecture**: Agentic LLM with tool use (5-10 API calls) |
 
 **Key Evolution**:
@@ -640,6 +640,9 @@ With the problem quantified, we can now:
 
 **The Bottom Line:**
 
-- **Problem**: $27.9M/year waste for 100-person sales team
-- **Opportunity**: 70% time savings = $21M/year impact
-- **Target ROI**: >20x (industry-leading for enterprise software)
+- **Problem**: $18-28M/year impact for 100-person sales team (combining hard costs + revenue opportunity)
+- **Conservative estimate (hard dollars only)**: $14-15M/year guaranteed savings
+- **Baseline opportunity**: 60% time savings = $13-18M/year impact
+- **Optimistic opportunity**: 70% time savings = $16-24M/year impact
+- **Target ROI**: >10x (conservative), >20x (optimistic) — both justify investment
+- **Credibility strategy**: Lead with conservative ($14M), demonstrate upside to baseline/optimistic
