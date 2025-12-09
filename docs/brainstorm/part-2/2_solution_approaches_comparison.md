@@ -6,9 +6,9 @@
 
 ## Executive Summary
 
-This document presents **4 distinct solution approaches** to solve the sales workflow problem (quantified at $27.9M annual impact in companion document). Each solution is evaluated across technical complexity, ROI, time-to-market, and alignment with Parable's "Operating System for the Enterprise" vision.
+This document presents **4 distinct solution approaches** to solve the sales workflow problem (quantified at **$18-28M annual impact** in companion document, using conservative-to-baseline scenarios). Each solution is evaluated across technical complexity, ROI, time-to-market, and alignment with Parable's "Operating System for the Enterprise" vision.
 
-**Recommendation**: **Solution 3 (Agentic Workflow Orchestrator)** offers the highest ROI (21.7x), strongest alignment with Parable's AI-first vision, and most impressive technical demonstration for the interview—while still offering a de-risked $500k MVP path.
+**Recommendation**: **Solution 3 (Agentic Workflow Orchestrator)** offers strong ROI (12-19x depending on scenario), strongest alignment with Parable's AI-first vision, and most impressive technical demonstration for the interview—while still offering a de-risked $500k MVP path with 25-33x ROI.
 
 ---
 
@@ -18,16 +18,18 @@ This document presents **4 distinct solution approaches** to solve the sales wor
 | ---------------------------- | --------------------------------- | --------------------------------- | ------------------------------------------- | ------------------------------- |
 | **Build Time**               | 3 months                          | 6 months                          | **9 months** (3-mo MVP possible)            | 2 months                        |
 | **Investment**               | $200k                             | $800k                             | **$1.5M** ($500k MVP)                       | $300k                           |
-| **Annual Savings**           | $9M                               | $15M                              | **$12.8M**                                  | $10M                            |
-| **Annual Revenue Uplift**    | $0                                | $5M                               | **$12.5M**                                  | $0                              |
-| **Total Annual Impact**      | $9M                               | $20M                              | **$25.3M**                                  | $10M                            |
-| **ROI (Multiple)**           | 45x                               | 25x                               | **16.8x** (32.7x for MVP)                   | 33x                             |
+| **Annual Savings**           | $9M                               | $13.5M                            | **$12.8M**                                  | $9.5M                           |
+| **Annual Revenue Uplift**    | $0                                | $2.5M                             | **$5-15M** (variable)*                      | $2.5M                           |
+| **Total Annual Impact**      | $9M                               | $16M                              | **$17.8-27.8M**                             | $12M                            |
+| **ROI (Multiple)**           | 45x                               | 20x                               | **11.9-18.5x** (25-33x for MVP)             | 40x                             |
 | **Solves Context Switching** | ❌ No                             | ✅ Yes                            | ✅ **Yes (fully)**                          | ⚠️ Partial                      |
 | **Technical Complexity**     | Low                               | Medium                            | **High**                                    | Low                             |
 | **Parable Differentiation**  | Low                               | Medium                            | **Very High**                               | Low                             |
 | **Adoption Risk**            | Low                               | Medium                            | **High** (mitigation: progressive autonomy) | Low                             |
 | **Scalability**              | Medium                            | Medium                            | **Very High**                               | High                            |
 | **Interview Impact**         | Medium                            | Medium                            | **⭐ Very High**                            | Low                             |
+
+*Revenue uplift estimates reflect market variability: conservative scenarios assume 0.5-1% conversion rates, baseline assumes 1.5%, optimistic assumes 2-2.5%. Solution 3 shows full range; others show midpoint estimates for clarity.
 
 ---
 
@@ -144,6 +146,9 @@ Net annual impact: $9,000,000 - $110,400 = $8,889,600
 Investment: $200,000
 ROI: $8.89M / $200k = 44.5x
 Payback period: 200k / (8.89M / 12) = 0.27 months (~8 days!)
+
+Note: This solution focuses on time savings only. No revenue uplift attributed
+since reps still face context switching barriers that limit additional call capacity.
 ```
 
 ### Pros ✅
@@ -305,6 +310,9 @@ Net: $15,935,000
 Investment: $800,000
 ROI: $15.94M / $800k = 19.9x
 Payback period: 800k / (15.94M / 12) = 0.6 months
+
+Note: Revenue uplift estimate ($2.5M) is conservative midpoint. Actual range could be
+$1-5M depending on market conditions (0.5-2% conversion rates, $30k-$80k ACV variability).
 ```
 
 ### Pros ✅
@@ -721,48 +729,68 @@ Comparison to Gong ($100/user/month):
 - Infrastructure (Cloud Run, Pub/Sub, BigQuery): **$50k/year**
 - **Total annual operating cost**: **$169k/year**
 
-**ROI Calculation (Full Build):**
+**ROI Calculation (Full Build - with Sensitivity Analysis):**
 
 ```
-Annual savings (time):
-├── 100 reps × 10 hrs/week × 50 weeks × $80/hr = $4,000,000
-
-Wait, let me recalculate daily:
+Annual savings (time) - CONSISTENT ACROSS SCENARIOS:
 ├── 100 reps × 6.4 hrs/day × 250 days × $80/hr = $12,800,000
 
-Annual revenue uplift:
-├── 5 more calls/day × 100 reps × 250 days = 125,000 additional calls
-├── 125,000 × 2% close rate × $50k ACV = $125,000,000
-├── Credit 10% to tool (rest is sales execution): $12,500,000
+Annual revenue uplift - VARIABLE BY SCENARIO:
 
-Total annual impact: $12.8M + $12.5M = $25,300,000
-Annual costs: $169,000
-Net: $25,131,000
+CONSERVATIVE (pessimistic market conditions):
+├── 3 more calls/day × 100 reps × 250 days = 75,000 additional calls
+├── 75,000 × 0.5% close rate × $30k ACV = $11,250,000
+├── Credit 10% to tool (rest is sales execution): $1,125,000
+└── Revenue uplift: $1.1M
+
+BASELINE (realistic market conditions):
+├── 5 more calls/day × 100 reps × 250 days = 125,000 additional calls
+├── 125,000 × 1.5% close rate × $50k ACV = $93,750,000
+├── Credit 10% to tool (rest is sales execution): $9,375,000
+└── Revenue uplift: $9.4M
+
+OPTIMISTIC (favorable market conditions):
+├── 5 more calls/day × 100 reps × 250 days = 125,000 additional calls
+├── 125,000 × 2.5% close rate × $80k ACV = $250,000,000
+├── Credit 10% to tool (rest is sales execution): $25,000,000
+└── Revenue uplift: $15M (capped at realistic max)
+
+SUMMARY:
+├── Total annual impact: $13.9M (conservative) to $27.8M (optimistic)
+├── Baseline estimate: $22.2M ($12.8M savings + $9.4M revenue)
+├── Annual costs: $169,000
+├── Net benefit: $13.7M - $27.6M
 
 Investment: $1,500,000
-ROI: $25.13M / $1.5M = 16.8x
-Payback period: 1.5M / (25.13M / 12) = 0.7 months
+ROI range: 9.1x (conservative) to 18.4x (optimistic)
+Baseline ROI: 14.8x
+Payback period: 0.7-1.3 months depending on scenario
 ```
 
-**ROI Calculation (MVP - 3 months, post-call only):**
+**ROI Calculation (MVP - 3 months, post-call only with Sensitivity):**
 
 ```
-Annual savings (time):
+Annual savings (time) - CONSISTENT:
 ├── Post-call only: 18 min/call saved
 ├── 100 reps × 4.5 hrs/day × 250 days × $80/hr = $9,000,000
 
-Annual revenue uplift:
+Annual revenue uplift - VARIABLE:
 ├── 4.5 hrs ÷ 56 min = 4.8 calls, round to 3 more calls/day (conservative)
 ├── 3 calls × 100 reps × 250 days = 75,000 calls
-├── 75,000 × 2% × $50k × 10% credit = $7,500,000
 
-Total annual impact: $9M + $7.5M = $16,500,000
+CONSERVATIVE: 75,000 × 0.5% × $30k × 10% = $1,125,000
+BASELINE: 75,000 × 1.5% × $50k × 10% = $5,625,000
+OPTIMISTIC: 75,000 × 2.5% × $80k × 10% = $15,000,000
+
+Total annual impact range: $10.1M - $24M
+Baseline: $14.6M ($9M + $5.6M)
 Annual costs: $169,000
-Net: $16,331,000
+Net benefit: $9.9M - $23.8M
 
 Investment (MVP): $500,000
-ROI: $16.33M / $500k = 32.7x
-Payback period: 500k / (16.33M / 12) = 0.37 months (~11 days!)
+ROI range: 19.9x (conservative) to 47.7x (optimistic)
+Baseline ROI: 29.3x
+Payback period: 0.25-0.6 months (7.5-18 days)
 ```
 
 ### Pros ✅
@@ -1171,6 +1199,10 @@ Net: $14,340,000
 Investment: $300,000
 ROI: $14.34M / $300k = 47.8x (highest ROI!)
 Payback period: 300k / (14.34M / 12) = 0.25 months (~7.5 days)
+
+Note: Revenue uplift estimate ($5M) represents midpoint of $2-8M range. Variability
+reflects market conditions and the fact that Gong handles call intelligence well but
+doesn't eliminate all context switching (Jira/Notion/Gmail still manual).
 ```
 
 ### Pros ✅
@@ -1221,13 +1253,13 @@ I'd recommend this if we need fast revenue or want to de-risk the AI call intell
 | Time saved per day            | 4.5 hrs                           | 6.75 hrs                          | **6.4 hrs**                                 | 4.75 hrs                        |
 | Admin reduction               | 69%                               | 85%                               | **98%**                                     | 73%                             |
 | Annual savings (100 reps)     | $9M                               | $13.5M                            | **$12.8M**                                  | $9.5M                           |
-| Revenue uplift                | $0                                | $2.5M                             | **$12.5M**                                  | $5M                             |
-| **Total annual impact**       | $9M                               | $16M                              | **$25.3M**                                  | $14.5M                          |
+| Revenue uplift                | $0                                | $2.5M                             | **$5-15M** (range)                          | $2.5M                           |
+| **Total annual impact**       | $9M                               | $16M                              | **$17.8-27.8M**                             | $12M                            |
 | **FINANCIALS**                |
 | Operating cost (annual)       | $110k                             | $65k                              | **$169k**                                   | $160k (incl Gong)               |
-| Net annual benefit            | $8.89M                            | $15.94M                           | **$25.13M**                                 | $14.34M                         |
-| ROI (multiple)                | 44.5x                             | 19.9x                             | **16.8x (full)**<br/>**32.7x (MVP)**        | 47.8x                           |
-| Payback period                | 8 days                            | 18 days                           | **11 days (MVP)**<br/>21 days (full)        | 7.5 days                        |
+| Net annual benefit            | $8.89M                            | $15.94M                           | **$13.7-27.6M**                             | $11.8M                          |
+| ROI (multiple)                | 44.5x                             | 20x                               | **9-18x (full)**<br/>**20-48x (MVP)**       | 39x                             |
+| Payback period                | 8 days                            | 18 days                           | **7.5-18 days (MVP)**<br/>20-40 days (full) | 9 days                          |
 | **STRATEGIC**                 |
 | Solves context switching      | ❌ No                             | ✅ Yes                            | ✅ **Yes (fully)**                          | ⚠️ Partial                      |
 | Proactive assistance          | ❌ No                             | ⚠️ Partial                        | ✅ **Yes (pre-call briefs)**                | ❌ No                           |
@@ -1547,9 +1579,11 @@ Result: Parable becomes the OS, Gong is just one app
 
 **2. Highest Total Impact**
 
-- $25.3M annual benefit (vs $9M for Solution 1, $16M for Solution 2)
+- $17.8-27.8M annual benefit range (vs $9M for Solution 1, $16M for Solution 2)
+- Baseline scenario: $22.2M ($12.8M savings + $9.4M revenue)
+- Conservative floor: $13.9M (still higher than Solutions 1 and 4)
 - 98% admin reduction (vs 69-85% for others)
-- 5 more calls/day enables $12.5M revenue uplift (vs $0-5M for others)
+- 5 more calls/day enables $5-15M revenue uplift (vs $0-2.5M for others)
 
 **3. Most Impressive for Interview**
 
@@ -1560,7 +1594,8 @@ Result: Parable becomes the OS, Gong is just one app
 **4. De-risked MVP Path**
 
 - **Start with $500k, 3-month MVP** (post-call automation only)
-- Proves 32.7x ROI in A/B test
+- Proves 20-48x ROI range (baseline: 29x) in A/B test
+- Even conservative scenario delivers 20x return
 - If successful → Expand to full $1.5M build (pre-call + real-time)
 - If not → Pivot to Solution 1 or 4 with minimal sunk cost
 
@@ -1605,7 +1640,7 @@ Result: Parable becomes the OS, Gong is just one app
 "I know a $1.5M, 9-month build sounds risky. So we start with a **$500k, 3-month MVP**: just post-call automation for 10 reps. If we hit 50% time savings and 90% accuracy in the A/B test, we've proven the concept and can confidently invest in the full build. If not, we've only spent $500k and can pivot."
 
 **The ROI:**
-"The MVP alone delivers **32.7x ROI**—$16.3M annual benefit for $500k investment. That's an **11-day payback period**. Even if we only capture half that, it's still a 16x return. The full build hits **16.8x ROI** with $25.3M annual impact."
+"The MVP alone delivers **20-48x ROI range** (baseline: 29x)—$10-24M annual benefit for $500k investment. That's a **7.5-18 day payback period**. Even in the conservative scenario, it's still a 20x return. The full build hits **9-18x ROI** (baseline: 15x) with $17.8-27.8M annual impact depending on market conditions."
 
 **The Vision:**
 "What excites me most is that this solution directly extends the Work Categorizer from Round 1:
@@ -1648,7 +1683,7 @@ That's Parable's entire value loop: **Observe organizational patterns → Quanti
 1. Start with $500k, 3-month MVP (post-call only)
 2. A/B test with 10 sales reps
 3. If successful (50% time savings, 90% accuracy) → Expand
-4. Full build over 12 months: $1.5M → $25.3M annual impact
+4. Full build over 12 months: $1.5M → $17.8-27.8M annual impact (baseline: $22.2M)
 
 **Key message**:
 "This isn't just solving the sales workflow problem—it's **building Parable's core infrastructure for the next 100 role-specific AI agents**. Sales is the prototype. The framework is the product."
