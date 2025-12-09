@@ -1,6 +1,8 @@
+https://promptdeploy.github.io/prompt-deploy-artifacts/agentic-workflow-orchestrator.html
+
 # A Day in the Life: The Agentic Workflow Orchestrator in Action
 
-*A real-world narrative illustrating how the AI agent transforms a sales rep's workflow*
+_A real-world narrative illustrating how the AI agent transforms a sales rep's workflow_
 
 ---
 
@@ -26,15 +28,18 @@ Sarah's phone buzzes. A Slack DM from **@workflow-agent**:
 > **Acme Industries Call in 5 minutes**
 >
 > **Context:**
+>
 > - Last contact: 2 weeks ago (Demo stage, $500k ARR)
 > - Blocker: API latency concern (Jira #456)
 > - Manager note: "Close by end of Q4"
 >
 > **What's changed since last call:**
+>
 > - John (SE) posted in #acme-technical: "API fix is 80% done, should be ready for testing next week"
 > - Jane Wilson viewed your pricing PDF twice yesterday
 >
 > **Suggested talking points:**
+>
 > 1. Lead with the API fix progress—this is their main concern
 > 2. Offer early access to the beta API for testing
 > 3. Probe on Q4 budget timing (Jane's PDF views suggest pricing review)
@@ -47,14 +52,14 @@ Sarah smiles. In 30 seconds, she's absorbed context that would have taken 10 min
 
 At 1:55 PM, the system's Calendar API detected an upcoming event. This triggered a Pub/Sub message that spun up a Cloud Run job. Within 150 milliseconds, the orchestrator queried four systems in parallel:
 
-| System | Query | Result |
-|--------|-------|--------|
-| Salesforce | Account details, deal stage, last contact | Demo stage, $500k, 2 weeks stale |
-| Jira | Open tickets for Acme | #456 "API latency" — Open, 80% complete |
-| Slack | Recent mentions of "Acme" | John's update in #acme-technical |
-| Notion | Manager priority flags | "Q4 close priority" |
+| System     | Query                                     | Result                                  |
+| ---------- | ----------------------------------------- | --------------------------------------- |
+| Salesforce | Account details, deal stage, last contact | Demo stage, $500k, 2 weeks stale        |
+| Jira       | Open tickets for Acme                     | #456 "API latency" — Open, 80% complete |
+| Slack      | Recent mentions of "Acme"                 | John's update in #acme-technical        |
+| Notion     | Manager priority flags                    | "Q4 close priority"                     |
 
-The LangGraph workflow then passed this aggregated context to GPT-4 Turbo with a role-specific prompt: *"You are a sales assistant. Synthesize this information into a 30-second pre-call brief."*
+The LangGraph workflow then passed this aggregated context to GPT-4 Turbo with a role-specific prompt: _"You are a sales assistant. Synthesize this information into a 30-second pre-call brief."_
 
 The model generated the message, and the `send_slack_message()` tool delivered it to Sarah's DM. Total time from trigger to delivery: **4.2 seconds**.
 
@@ -119,6 +124,7 @@ The call continues smoothly. Jane and Bob get their technical answers. Sarah did
 Sarah hangs up feeling good. The call went 32 minutes, and she's confident Acme is moving forward. Jane even mentioned wanting to "get this wrapped up before the holidays."
 
 In the old world, Sarah's next 18 minutes would look like this:
+
 - Open Salesforce, find Acme, write call notes (8 min)
 - Draft follow-up email to Jane and Bob (5 min)
 - Update Jira #456 with customer feedback (2 min)
@@ -142,8 +148,12 @@ GPT-4 Turbo received the transcript along with the pre-call context. Its task: e
 ```json
 {
   "decision_makers": [
-    {"name": "Jane Wilson", "title": "CTO", "sentiment": "positive"},
-    {"name": "Bob Torres", "title": "VP Engineering", "sentiment": "neutral_to_positive"}
+    { "name": "Jane Wilson", "title": "CTO", "sentiment": "positive" },
+    {
+      "name": "Bob Torres",
+      "title": "VP Engineering",
+      "sentiment": "neutral_to_positive"
+    }
   ],
   "next_steps": [
     "Send API performance benchmarks by Monday",
@@ -158,8 +168,16 @@ GPT-4 Turbo received the transcript along with the pre-call context. Its task: e
     }
   ],
   "key_quotes": [
-    {"text": "We want to get this wrapped up before the holidays", "speaker": "Jane", "timestamp": "28:45"},
-    {"text": "The P99 numbers look good, that was our main concern", "speaker": "Bob", "timestamp": "18:22"}
+    {
+      "text": "We want to get this wrapped up before the holidays",
+      "speaker": "Jane",
+      "timestamp": "28:45"
+    },
+    {
+      "text": "The P99 numbers look good, that was our main concern",
+      "speaker": "Bob",
+      "timestamp": "18:22"
+    }
   ],
   "deal_stage_recommendation": "Advance to Negotiation",
   "urgency": "high",
@@ -171,11 +189,11 @@ GPT-4 Turbo received the transcript along with the pre-call context. Its task: e
 
 Before writing to any system, the orchestrator's verification layer checked each claim against the source transcript:
 
-| Claim | Evidence Found | Verified |
-|-------|----------------|----------|
-| "Jane wants to close before holidays" | Timestamp 28:45: "wrapped up before the holidays" | Yes |
-| "Bob satisfied with P99 numbers" | Timestamp 18:22: "P99 numbers look good" | Yes |
-| "Next step: send benchmarks by Monday" | Timestamp 24:15: "Can you send those by Monday?" | Yes |
+| Claim                                  | Evidence Found                                    | Verified |
+| -------------------------------------- | ------------------------------------------------- | -------- |
+| "Jane wants to close before holidays"  | Timestamp 28:45: "wrapped up before the holidays" | Yes      |
+| "Bob satisfied with P99 numbers"       | Timestamp 18:22: "P99 numbers look good"          | Yes      |
+| "Next step: send benchmarks by Monday" | Timestamp 24:15: "Can you send those by Monday?"  | Yes      |
 
 Confidence score: **0.96** (above the 0.95 threshold for auto-execution).
 
@@ -226,12 +244,14 @@ Sarah's phone buzzes. She's still holding her coffee.
 > **Summary:** Positive call with Jane (CTO) and Bob (VP Eng). API concerns resolved. Jane mentioned holiday close timeline.
 >
 > **Systems updated:**
+>
 > - Salesforce: Call notes added
 > - Jira #456: Customer feedback logged
 > - Notion: Weekly summary updated
 > - Slack: John notified of positive feedback
 >
 > **Needs your review:**
+>
 > - [Email draft to Jane] ← Click to review before sending
 >
 > **Time saved: 17.5 minutes**
@@ -248,21 +268,21 @@ Total time spent on post-call admin: **30 seconds**.
 
 ### Sarah's Single Call
 
-| Task | Before Agent | After Agent | Saved |
-|------|--------------|-------------|-------|
-| Pre-call prep | 5 min | 0 min (30 sec to read brief) | 4.5 min |
-| Mid-call coordination | 3 min | 0 min (4 sec agent response) | 3 min |
-| Post-call admin | 18 min | 0.5 min (review only) | 17.5 min |
-| **Total** | **26 min** | **1 min** | **25 min** |
+| Task                  | Before Agent | After Agent                  | Saved      |
+| --------------------- | ------------ | ---------------------------- | ---------- |
+| Pre-call prep         | 5 min        | 0 min (30 sec to read brief) | 4.5 min    |
+| Mid-call coordination | 3 min        | 0 min (4 sec agent response) | 3 min      |
+| Post-call admin       | 18 min       | 0.5 min (review only)        | 17.5 min   |
+| **Total**             | **26 min**   | **1 min**                    | **25 min** |
 
 ### Sarah's Full Day (15 Calls)
 
-| Metric | Before | After | Impact |
-|--------|--------|-------|--------|
-| Admin time | 6.5 hours | 15 min | 97% reduction |
-| Selling time | 1.5 hours | 7.75 hours | 5x increase |
-| Context switches | 90+ (6 per call) | 15 (1 per call) | 83% reduction |
-| Errors (missed follow-ups) | ~2 per day | ~0 | Near elimination |
+| Metric                     | Before           | After           | Impact           |
+| -------------------------- | ---------------- | --------------- | ---------------- |
+| Admin time                 | 6.5 hours        | 15 min          | 97% reduction    |
+| Selling time               | 1.5 hours        | 7.75 hours      | 5x increase      |
+| Context switches           | 90+ (6 per call) | 15 (1 per call) | 83% reduction    |
+| Errors (missed follow-ups) | ~2 per day       | ~0              | Near elimination |
 
 ### What the Agent Handled Today
 
@@ -324,4 +344,59 @@ Sarah, meanwhile, is already on her first call of the day. Her phone buzzes with
 
 ---
 
-*This narrative illustrates the system design from `4_system_design_agentic_orchestrator.md`. The agent operates across three phases—proactive preparation, real-time assistance, and autonomous execution—to transform 6.5 hours of daily admin into 15 minutes of review.*
+## Limitations & Assumptions
+
+_This narrative represents a "best case" scenario after 6+ months of system maturity. Here's what real-world deployment looks like:_
+
+### What This Narrative Assumes
+
+| Assumption                                | Reality Check                                                                           |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- |
+| All systems have clean, current data      | Salesforce is often stale; Jira tickets miscategorized; Slack threads in wrong channels |
+| Sarah trusts the system immediately       | Trust takes 3-6 months to build. One wrong brief = significant trust erosion            |
+| John sees Slack and responds in 30s       | Slack "Active" ≠ available. Realistic SE response: 2-5 minutes                          |
+| 0.96 confidence = safe to auto-execute    | LLM confidence is poorly calibrated. Year 1 needs much more human review                |
+| Speaker diarization works seamlessly      | Whisper doesn't do this natively—requires additional ML pipeline (pyannote.audio)       |
+| "Jane viewed your PDF twice" is available | Requires document analytics integration most companies don't have                       |
+
+### Realistic Year 1 vs. Year 2+ Expectations
+
+| Metric                | Narrative (Year 2+) | Year 1 Reality                  |
+| --------------------- | ------------------- | ------------------------------- |
+| Time saved per call   | 25 min              | 10-15 min (still significant!)  |
+| Auto-approval rate    | 97%                 | 60-70%                          |
+| Error rate            | 3%                  | 8-12%, improving monthly        |
+| Human review required | Spot checks only    | Most outputs initially          |
+| User adoption         | Seamless            | 3-6 month trust-building period |
+
+### Edge Cases
+
+- **Last-minute cancellation**: Brief sent for a call that never happens
+- **Small talk calls**: No actionable content to extract
+- **Multi-account calls**: Customer mentions three different projects
+- **Sensitive topics**: Legal, HR, or "off the record" discussions
+- **Poor audio quality**: Background noise, bad connections, accents
+
+### Integration Realities
+
+- **OAuth token refresh** across 6 systems requires careful management
+- **API rate limits**: Salesforce (100k/day), Jira (1k/hour) need queuing
+- **Schema changes**: Salesforce releases 3x/year; prompts may break
+- **Cost at scale**: $0.15/call × 15 calls × 100 reps = $225/day in LLM costs
+
+### Compliance Considerations
+
+- **Recording consent** varies by state/country (two-party consent states)
+- **GDPR** implications for storing and processing transcripts
+- **Data retention** policies for AI-generated content
+- **Audit requirements** for regulated industries (finance, healthcare)
+
+### The Honest Pitch
+
+This system **can** save 10-15 minutes per call in Year 1, scaling to 20+ minutes as confidence thresholds are tuned and user trust is established. The key is **progressive autonomy**:
+
+1. **Months 1-3**: Preview mode. AI drafts, human approves everything.
+2. **Months 3-6**: Opt-out mode. Auto-execute if confidence >95%, human can cancel.
+3. **Months 6+**: Full autonomy with random spot checks to prevent complacency.
+
+The narrative above represents the Month 6+ state. Getting there requires patience, iteration, and realistic expectations.
