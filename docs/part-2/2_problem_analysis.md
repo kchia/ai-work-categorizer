@@ -70,13 +70,13 @@ TOTAL IMPACT:        $18–28M/year
 
 ## Parable's CEO Questions
 
-| Category               | Problem / Opportunity             | Key Details                                                                                                                                                 |
-| ---------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Bureaucracy**        | Redundant data entry              | Same call summary re-typed into Salesforce, email, Jira, Slack, and Notion for 6 different stakeholders                                                     |
-| **Friction**           | Context switching overload        | 90+ context switches/day across 6 tools; 6.5 hours of daily admin; reps report "no time to sell"                                                            |
-| **Waste**              | Financial drain                   | ~$13M/year (100-rep team) + $5–15M in realistic revenue left on the table                                                                                   |
-| **Automation Targets** | High-value, repetitive tasks      | Call transcription, CRM note generation, follow-up emails, Jira ticket creation, manager reporting — all derived from the same underlying call intelligence |
-| **AI Solution**        | End-to-end workflow orchestration | Deploy an agent layer that sits atop existing systems and orchestrates workflows, returning multiple hours/day to each rep                                  |
+| Category                                                     | Problem / Opportunity             | Key Details                                                                                                                                                 |
+| ------------------------------------------------------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Where's the bureaucracy?**                                 | Redundant data entry              | Same call summary re-typed into Salesforce, email, Jira, Slack, and Notion for 6 different stakeholders                                                     |
+| **Where's the friction?**                                    | Context switching overload        | 90+ context switches/day across 6 tools; 6.5 hours of daily admin; reps report "no time to sell"                                                            |
+| **Where's the waste?**                                       | Financial drain                   | ~$13M/year (100-rep team) + $5–15M in realistic revenue left on the table                                                                                   |
+| **Where can we automate?**                                   | High-value, repetitive tasks      | Call transcription, CRM note generation, follow-up emails, Jira ticket creation, manager reporting — all derived from the same underlying call intelligence |
+| **How can we use AI to make the team 100x more productive?** | End-to-end workflow orchestration | Deploy an agent layer that sits atop existing systems and orchestrates workflows, returning multiple hours/day to each rep                                  |
 
 One input (the call) → one AI system → multiple outputs formatted per destination. The 100x productivity gain comes from collapsing the write-once-copy-six pattern into write-zero-distribute-everywhere.
 

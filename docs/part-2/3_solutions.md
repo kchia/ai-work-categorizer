@@ -41,4 +41,4 @@ _“Action layer of autonomous agents sitting on top of the existing stack.”_
 
 - Total annual impact: **~$18–28M** for a 100-rep org (hard savings + revenue uplift).
 - Admin time cut by **60–70%+**, enabling 3–5 additional calls per rep per day.
-- **MVP path:** 3-month, ~$500k “post-call only” agent with **20–30x+ ROI**, before committing to the full 9-month build.
+- **MVP path:** 3-month, ~$500k “post-call only”, before committing to the full 9-month build.
