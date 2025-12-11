@@ -50,12 +50,12 @@ Org-wide volume:
 ├── 5 calls × 100 reps × 250 days = 125,000 incremental calls/year
 
 Revenue impact range (close rate × ACV):
-├── Conservative: 0.5% close × $30k ACV = $187,500/rep → ~$5M org
-├── Baseline: 1.5% close × $50k ACV = ~$937,500/rep → ~$10M org
-└── Optimistic: 2.5% close × $80k ACV = ~$2.5M/rep → ~$15M org
+├── Conservative: 25,000 sales qualified calls x 0.5% close × $30k ACV = ~$3.75M org
+├── Baseline: 30,000 sales qualified calls x 1.5% close × $40k ACV = ~$18M org
+└── Optimistic: 35,000 sales qualified calls x 2.5% close × $50k ACV = ~$44M org
 ```
 
-**Opportunity range:** **$5–15M/year**
+**Opportunity range:** **$4–44M/year**
 
 ---
 
@@ -63,9 +63,9 @@ Revenue impact range (close rate × ACV):
 
 ```
 HARD COSTS:          $14–15M
-OPPORTUNITY:         $5–15M
+OPPORTUNITY:         $4–44M
 ──────────────────────────────
-TOTAL IMPACT:        $18–28M/year
+TOTAL IMPACT:        $18–59M/year
 ```
 
 ---
