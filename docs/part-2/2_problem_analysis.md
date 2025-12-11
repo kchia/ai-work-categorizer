@@ -2,6 +2,8 @@
 
 ---
 
+"I have to get on calls with my sales prospects with 3CX, log in my notes in Salesforce, then send an email to the client with an overview, update my Jira ticket. I'm coordinating with my Solutions Engineer on slack in real time. Finally, my boss wants weekly Notion pages with prospect specific updates. I get on 15 calls a day! It's too much writing, too much admin. I feel like I don't have enough time to sell"
+
 ## **The Core Problem**
 
 ### **Daily Workflow Breakdown (Per Rep)**
