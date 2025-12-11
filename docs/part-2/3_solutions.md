@@ -21,7 +21,6 @@
 | Solves context switching | ❌ No                 | ✅ Yes (single UI)    | ✅ **Yes (no manual work)**  | ⚠️ Partial          |
 | Pre-call prep            | ❌ No                 | ⚠️ Limited            | ✅ **Proactive briefs**      | ❌ No               |
 | Real-time assistance     | ❌ No                 | ⚠️ Possible add-on    | ✅ **Yes (SE coordination)** | ❌ No               |
-| CEO-level visibility     | ⚠️ Limited            | ⚠️ Better             | ✅ **Clear time + $ impact** | ⚠️ Limited          |
 | Parable differentiation  | Low                   | Medium                | **Very High**                | Low                 |
 
 ---
