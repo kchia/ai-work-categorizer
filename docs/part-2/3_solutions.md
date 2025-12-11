@@ -2,12 +2,12 @@
 
 **Goal:** Eliminate sales admin overhead and context switching across 6 tools, in a way that fits Parable’s “operating system for the enterprise” vision.
 
-| #   | Solution                             | What It Is                                                      | Time to Build | Investment  | Annual Impact (100 reps)         | Notes                                 |
-| --- | ------------------------------------ | --------------------------------------------------------------- | ------------- | ----------- | -------------------------------- | ------------------------------------- |
-| 1   | **AI Call Assistant**                | Transcribe calls, auto-fill Salesforce + draft follow-up email  | ~3 months     | ~$200k      | **≈ $9M** (time savings only)    | Simple, low-risk feature              |
-| 2   | **Unified Workspace**                | Single UI for Salesforce, Jira, Slack, email, Notion, 3CX       | ~6 months     | ~$800k      | **≈ $16M**                       | Solves context switching via UI       |
-| 3   | **Agentic Workflow Orchestrator ⭐** | Autonomous agent that uses all 6 tools on the rep’s behalf      | 3–9 months    | $500k–$1.5M | **≈ $18–28M** (savings + uplift) | Action layer, “OS for the enterprise” |
-| 4   | **Buy + Customize (Gong + Layer)**   | Use Gong for calls, Parable layer pushes updates to other tools | ~2 months     | ~$300k      | **≈ $12M**                       | Pragmatic, but not differentiated     |
+| #   | Solution                             | What It Is                                                      | Notes                                 |
+| --- | ------------------------------------ | --------------------------------------------------------------- | ------------------------------------- |
+| 1   | **AI Call Assistant**                | Transcribe calls, auto-fill Salesforce + draft follow-up email  | Simple, low-risk feature              |
+| 2   | **Unified Workspace**                | Single UI for Salesforce, Jira, Slack, email, Notion, 3CX       | Solves context switching via UI       |
+| 3   | **Agentic Workflow Orchestrator ⭐** | Autonomous agent that uses all 6 tools on the rep’s behalf      | Action layer, “OS for the enterprise” |
+| 4   | **Buy + Customize (Gong + Layer)**   | Use Gong for calls, Parable layer pushes updates to other tools | Pragmatic, but not differentiated     |
 
 ---
 
