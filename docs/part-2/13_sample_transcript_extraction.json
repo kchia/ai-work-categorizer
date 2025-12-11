@@ -1,0 +1,313 @@
+{
+  "call_id": "acme_120624",
+  "call_timestamp": "2024-12-06T14:32:00Z",
+  "extraction_timestamp": "2024-12-06T14:34:05Z",
+  "transcript_length_words": 8234,
+  "call_duration_seconds": 1920,
+
+  "decision_makers": [
+    {
+      "name": "Jane Wilson",
+      "title": "CTO",
+      "sentiment": "positive",
+      "role": "Economic Buyer",
+      "engagement_level": "high",
+      "key_concerns": ["API latency", "Holiday timeline"],
+      "quotes_count": 3
+    },
+    {
+      "name": "Bob Torres",
+      "title": "VP Engineering",
+      "sentiment": "neutral_to_positive",
+      "role": "Technical Evaluator",
+      "engagement_level": "medium",
+      "key_concerns": ["P99 latency under load", "Concurrent connections"],
+      "quotes_count": 2
+    }
+  ],
+
+  "next_steps": [
+    {
+      "action": "Send API performance benchmarks by Monday",
+      "owner": "Sarah Chen",
+      "due_date": "2024-12-09",
+      "priority": "high",
+      "mentioned_at_timestamp": "24:15"
+    },
+    {
+      "action": "Schedule technical deep-dive with Bob next week",
+      "owner": "Sarah Chen",
+      "due_date": "2024-12-13",
+      "priority": "medium",
+      "mentioned_at_timestamp": "26:30"
+    },
+    {
+      "action": "Prepare contract for review before Dec 20",
+      "owner": "Sarah Chen",
+      "due_date": "2024-12-20",
+      "priority": "high",
+      "mentioned_at_timestamp": "28:45"
+    }
+  ],
+
+  "blockers_discussed": [
+    {
+      "issue": "API latency under load",
+      "status": "Addressed by John—customer satisfied",
+      "jira_ticket": "#456",
+      "severity": "high",
+      "resolution_mentioned": true,
+      "mentioned_at_timestamp": "18:22"
+    }
+  ],
+
+  "key_quotes": [
+    {
+      "text": "We want to get this wrapped up before the holidays",
+      "speaker": "Jane Wilson",
+      "timestamp": "28:45",
+      "sentiment": "positive",
+      "importance": "high",
+      "category": "timeline"
+    },
+    {
+      "text": "The P99 numbers look good, that was our main concern",
+      "speaker": "Bob Torres",
+      "timestamp": "18:22",
+      "sentiment": "positive",
+      "importance": "high",
+      "category": "technical_validation"
+    },
+    {
+      "text": "Can you send those benchmarks by Monday?",
+      "speaker": "Jane Wilson",
+      "timestamp": "24:15",
+      "sentiment": "neutral",
+      "importance": "medium",
+      "category": "action_item"
+    }
+  ],
+
+  "deal_intelligence": {
+    "deal_stage_recommendation": "Advance to Negotiation",
+    "current_stage": "Demo",
+    "urgency": "high",
+    "budget_timeline": "Q4 2024",
+    "budget_confirmed": true,
+    "competitive_mentions": ["Gong"],
+    "pricing_discussed": true,
+    "pricing_sentiment": "positive",
+    "technical_concerns": [
+      {
+        "concern": "API latency under load",
+        "status": "resolved",
+        "resolution_details": "SE John provided P99 benchmarks, customer satisfied"
+      }
+    ],
+    "buying_signals": [
+      "Timeline urgency mentioned",
+      "Budget confirmed",
+      "Technical concerns resolved",
+      "Request for contract review"
+    ],
+    "risk_factors": ["Competitor (Gong) in evaluation"]
+  },
+
+  "call_metadata": {
+    "call_duration_seconds": 1920,
+    "participants": [
+      {
+        "name": "Sarah Chen",
+        "role": "Account Executive",
+        "company": "TechCorp"
+      },
+      {
+        "name": "Jane Wilson",
+        "role": "CTO",
+        "company": "Acme Industries"
+      },
+      {
+        "name": "Bob Torres",
+        "role": "VP Engineering",
+        "company": "Acme Industries"
+      },
+      {
+        "name": "John Martinez",
+        "role": "Sales Engineer",
+        "company": "TechCorp",
+        "joined_at_timestamp": "23:30"
+      }
+    ],
+    "call_type": "Demo",
+    "outcome": "positive",
+    "call_quality": "high",
+    "audio_quality": "good"
+  },
+
+  "email_data": {
+    "email_recipients": [
+      {
+        "name": "Jane Wilson",
+        "email": "jane.wilson@acme.com",
+        "role": "primary",
+        "title": "CTO"
+      },
+      {
+        "name": "Bob Torres",
+        "email": "bob.torres@acme.com",
+        "role": "cc",
+        "title": "VP Engineering"
+      }
+    ],
+    "email_summary": "Thank you for the productive demo call today. We're excited to move forward with Acme Industries and address your API performance requirements. As discussed, I'll send the API performance benchmarks by Monday and we can schedule a technical deep-dive next week.",
+    "email_subject_suggestion": "Follow-up: Acme Industries Demo - Next Steps",
+    "attachments_needed": [
+      "API performance benchmarks",
+      "Technical documentation"
+    ],
+    "meeting_request": {
+      "topic": "Technical deep-dive with Bob",
+      "suggested_date": "Next week",
+      "duration_minutes": 60
+    },
+    "tone": "professional",
+    "key_points_to_include": [
+      "API latency concerns addressed",
+      "P99 benchmarks provided",
+      "Holiday timeline acknowledged",
+      "Contract review timeline"
+    ]
+  },
+
+  "se_coordination": {
+    "se_assistance_needed": true,
+    "se_involved": [
+      {
+        "name": "John Martinez",
+        "joined_call": true,
+        "joined_at_timestamp": "23:30",
+        "topics_handled": ["P99 latency under load", "Concurrent connections"]
+      }
+    ],
+    "se_topics": [
+      "API performance benchmarks",
+      "Load testing results",
+      "P99 latency metrics"
+    ],
+    "se_urgency": "high",
+    "se_context": "Customer asked about P99 latency under 10k concurrent connections. SE John joined call and provided benchmarks. Customer satisfied.",
+    "se_follow_up_needed": false,
+    "se_feedback": "Positive - customer satisfied with technical answers"
+  },
+
+  "manager_reporting": {
+    "weekly_summary_highlights": [
+      "Demo call successful with Acme Industries",
+      "Advancing to Negotiation stage",
+      "Holiday close timeline confirmed",
+      "Technical concerns resolved by SE team"
+    ],
+    "risks": ["Competitor (Gong) also in evaluation"],
+    "status": "On Track",
+    "deal_health": "green",
+    "key_achievements": [
+      "Resolved API latency blocker",
+      "Confirmed Q4 budget timeline",
+      "Identified decision makers and their concerns"
+    ],
+    "next_week_priorities": [
+      "Send API benchmarks by Monday",
+      "Schedule technical deep-dive",
+      "Prepare contract for review"
+    ]
+  },
+
+  "salesforce_fields": {
+    "account_id": "acme_corp_12345",
+    "opportunity_id": "opp_789xyz",
+    "call_note": "32-minute demo call with Jane Wilson (CTO) and Bob Torres (VP Engineering). Key discussion points: API latency concerns addressed by SE John Martinez with P99 benchmarks. Customer satisfied with technical answers. Jane mentioned wanting to 'get this wrapped up before the holidays' - strong buying signal. Bob confirmed P99 numbers look good. Next steps: Send API performance benchmarks by Monday, schedule technical deep-dive next week, prepare contract for review before Dec 20. Competitive mention: Gong also in evaluation. Deal stage recommendation: Advance to Negotiation.",
+    "call_duration_seconds": 1920,
+    "call_type": "Demo",
+    "call_outcome": "Positive",
+    "next_steps": [
+      "Send API performance benchmarks by Monday",
+      "Schedule technical deep-dive with Bob next week",
+      "Prepare contract for review before Dec 20"
+    ],
+    "contacts_mentioned": [
+      {
+        "name": "Jane Wilson",
+        "title": "CTO",
+        "role": "Economic Buyer",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Bob Torres",
+        "title": "VP Engineering",
+        "role": "Technical Evaluator",
+        "sentiment": "neutral_to_positive"
+      }
+    ],
+    "deal_stage_update": "Negotiation"
+  },
+
+  "jira_updates": [
+    {
+      "ticket_id": "#456",
+      "action": "add_comment",
+      "comment": "Customer feedback: P99 latency concerns addressed during demo call. Bob Torres (VP Engineering) confirmed satisfaction with benchmarks provided by SE John Martinez. Status: Resolved from customer perspective.",
+      "update_status": null,
+      "priority": "high"
+    }
+  ],
+
+  "slack_notifications": [
+    {
+      "recipient": "John Martinez",
+      "channel": "dm",
+      "message": "Great job on the Acme call! Bob said the P99 numbers addressed their concerns. Customer is satisfied and moving forward.",
+      "urgency": "low",
+      "category": "positive_feedback"
+    }
+  ],
+
+  "notion_updates": {
+    "page_id": "sarah_weekly_summary",
+    "content": "**Acme Industries**: Demo call successful, advancing to Negotiation. Holiday close timeline confirmed. API latency concerns resolved by SE team. Competitive threat: Gong also in evaluation.",
+    "format": "markdown",
+    "section": "deals_in_progress"
+  },
+
+  "confidence_and_verification": {
+    "confidence_score": 0.96,
+    "extraction_quality": "high",
+    "requires_human_review": false,
+    "verification_results": [
+      {
+        "claim": "Jane wants to close before holidays",
+        "evidence_found": "Timestamp 28:45: 'wrapped up before the holidays'",
+        "verified": true
+      },
+      {
+        "claim": "Bob satisfied with P99 numbers",
+        "evidence_found": "Timestamp 18:22: 'P99 numbers look good'",
+        "verified": true
+      },
+      {
+        "claim": "Next step: send benchmarks by Monday",
+        "evidence_found": "Timestamp 24:15: 'Can you send those by Monday?'",
+        "verified": true
+      }
+    ],
+    "low_confidence_fields": [],
+    "missing_information": []
+  },
+
+  "metadata": {
+    "extraction_model": "gpt-4-turbo",
+    "extraction_version": "1.0",
+    "schema_version": "1.0",
+    "pre_call_context_used": true,
+    "transcript_source": "whisper-large-v3"
+  }
+}
