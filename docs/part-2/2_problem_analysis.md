@@ -18,7 +18,7 @@ Admin & overhead:
 ├── Jira ticket updates: 4 min × 15 = 1.0 hour
 ├── Pre-call preparation: 5 min × 15 = 1.25 hours
 ├── Slack coordination (SE, managers): ~45 min/day
-└── Weekly Notion summary (amortized): ~45 min/day
+└── Weekly Notion summary: ~45 min/day
 ────────────────────────────────────────────────────────────
 Total explicit admin: **6.5 hours/day**
 Context switching tax (90+ app transitions): **1–1.5 hours/day**
