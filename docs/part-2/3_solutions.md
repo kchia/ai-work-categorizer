@@ -39,6 +39,6 @@ _“Action layer of autonomous agents sitting on top of the existing stack.”_
 
 **2. Strongest business impact with a de-risked path**
 
-- Total annual impact: **~$18–28M** for a 100-rep org (hard savings + revenue uplift).
+- Total annual impact: **~$18–59M** for a 100-rep org (hard savings + revenue uplift).
 - Admin time cut by **60–70%+**, enabling 3–5 additional calls per rep per day.
-- **MVP path:** 3-month, ~$500k “post-call only”, before committing to the full 9-month build.
+- **MVP path:** 3-month, ~$500k “post-call only”, before committing to the full multi-month build.
